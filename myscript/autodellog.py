@@ -1,5 +1,5 @@
 #--coding:UTF-8--
-
+#删除上一个月的apache日志文件
 import os,datetime,time
 
 def month_get():
