@@ -20,4 +20,4 @@ def get_dirlist(date_range):
             print dir + os.sep + i,os.remove(dir + os.sep + i)  # 输出匹配出来的文件，再删除，这样可以知道删除了哪些文件
 
 print date_range[0],date_range[1]  # 输出return里的第一个和第二个元祖
-get_dirlist(date_range)  # 调用函数（执行函数）
+get_dirlist(date_range)  # 调用函数（执行函数）2
