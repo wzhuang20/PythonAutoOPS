@@ -19,7 +19,7 @@ def get_loglist():
 
         if os.stat(dir+os.sep+i).st_mtime > date_from and  os.stat(dir+os.sep+i).st_mtime < date_to :
             print dir+os.sep+i
-            upload(i, 'test', folderstate=1)
+            upload(i, 'test', folderstate=1)  # test是ftp服务端的文件夹
 
 def upload(filename, filedirectory=None, folderstate=0):
     parser = SafeConfigParser()
@@ -32,7 +32,7 @@ def upload(filename, filedirectory=None, folderstate=0):
     session = ftplib.FTP(host, user, password)
     filename_extension_together = os.path.splitext(filename)
     storefilename = filename_extension_together[0] + filename_extension_together[1]
-    file = open('/opt/www/logs/'+filename, 'rb')  # file to send
+    file = open('/opt/www/logs/'+filename, 'rb')  # file to send 需要备份的日志路径
     print "Opening Folder ", filedirectory
     print "Sending ..."
 
