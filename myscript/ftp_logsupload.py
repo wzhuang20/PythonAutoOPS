@@ -2,7 +2,6 @@ import os,datetime,time
 import ftplib
 from ConfigParser import SafeConfigParser
 import sys
-import os
 
 today = datetime.date.today()
 yesterday = today - datetime.timedelta(days=1)
@@ -21,7 +20,6 @@ def get_loglist():
         if os.stat(dir+os.sep+i).st_mtime > date_from and  os.stat(dir+os.sep+i).st_mtime < date_to :
             print dir+os.sep+i
             upload(i, 'test', folderstate=1)
-            #upload(dir,dir+os.sep+i,'test')
 
 def upload(filename, filedirectory=None, folderstate=0):
     parser = SafeConfigParser()
@@ -34,7 +32,7 @@ def upload(filename, filedirectory=None, folderstate=0):
     session = ftplib.FTP(host, user, password)
     filename_extension_together = os.path.splitext(filename)
     storefilename = filename_extension_together[0] + filename_extension_together[1]
-    file = open(filename, 'rb')  # file to send
+    file = open('/opt/www/logs/'+filename, 'rb')  # file to send
     print "Opening Folder ", filedirectory
     print "Sending ..."
 
