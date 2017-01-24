@@ -32,7 +32,7 @@ child.logfile = fout
 try:
     child.expect('(?i)password')
     child.sendline(passwd)
-    child.expect(pexpect.EOF)  # 匹配缓冲区EOF（结尾），保证文件复制正常完成。
+    child.expect(pexpect.EOF)  # 匹配缓冲区EOF（结尾），保证文件复制正常完成
 except EPF:
     print "except EOF"
 except TIMEOUT:
