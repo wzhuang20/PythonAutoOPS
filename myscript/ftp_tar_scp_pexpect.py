@@ -22,7 +22,7 @@ try:
     fout.close()
 except EOF:  # 定义EOF异常处理
     print "expect EOF"
-except TIMEOUT:  # 定义TIMEOUT异常处理.
+except TIMEOUT:  # 定义TIMEOUT异常处理
     print "expect TIMEOUT"
 
 
