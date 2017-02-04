@@ -12,4 +12,4 @@ ssh.load_system_host_keys()  # 获取客户端host_keys，默认 ~/.ssh/known_ho
 ssh.connect(hostname=hostname,username=username,password=password)  # 创建ssh连接
 stdin,stdout,stderr=ssh.exec_command('free -m')  # 调用远程执行命令方法stdout.readlines()
 print stdout.read()  # 打印命令执行结果，得到python列表形式，可以使用stdout.readlines()
-ssh.close()  # 关闭ssh连接
+ssh.close()  # 关闭ssh连接.
