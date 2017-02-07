@@ -15,5 +15,5 @@ def remove_task():
         run("ls -l")
 
 # 通过fab命令分别调用local_task和remove_task
-fab -f simple.py local_task
-fab -f simple.py remove_task
+#fab -f simple.py local_task
+#fab -f simple.py remove_task
