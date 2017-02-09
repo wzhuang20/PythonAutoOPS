@@ -1,7 +1,7 @@
 # --coding:UTF-8--  需要crypto、ecdsa包和python开发包python-devel的支持
 import paramiko
 
-hostname='47.93.87.11'
+hostname='192.168.1.4'
 username='root'
 password='*********'
 paramiko.util.log_to_file('syslogin.log')  # 发送paramiko日志到syslogin.log文件
