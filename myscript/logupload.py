@@ -5,10 +5,10 @@ tar -zcf /opt/script/bak/ht.zpchefang-access_"$YESTERDAY".tar.gz /opt/www/logs/h
 tar -zcf /opt/script/bak/img.zpchefang-access_"$YESTERDAY".tar.gz /opt/www/logs/img.zpchefang-access_"$YESTERDAY"_log
 tar -zcf /opt/script/bak/www.zpchefang-access_"$YESTERDAY".tar.gz /opt/www/logs/www.zpchefang-access_"$YESTERDAY"_log
 ftp -n<<!
-open 101.200.143.101
-user logs Zhong123pu$
+open 192.168.1.4
+user user ********
 binary
-cd 182.92.103.63
+cd 192.168.4.2
 lcd /opt/script/bak
 put api.zpchefang-access_"$YESTERDAY".tar.gz
 put ht.zpchefang-access_"$YESTERDAY".tar.gz
