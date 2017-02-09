@@ -3,8 +3,8 @@
 from fabric.api import *
 
 env.user='root'
-env.hosts=['47.93.87.11','47.93.87.52']
-env.password='dongbei.001'
+env.hosts=['192.168.1.5','192.168.1.6']
+env.password='********'
 
 @runs_once  # 查看本地系统信息，当有多台主机时只运行一次
 def local_task():  # 本地任务函数
