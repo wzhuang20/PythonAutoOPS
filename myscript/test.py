@@ -30,7 +30,7 @@ def dbtask():  # 部署mysql环境
         run("systemctl enable mariadb")
 
 
-#@roles('webservers','dbservers')  # publictask任务函数同时引用两个角色修饰符
+#@roles('webservers','dbservers')  # publictask任务函数同时引用两个角色修饰符。
 #def publictask():  # 部署公共类环境，如epel、ntp等
 #    print yellow("Install epel ntp...")
 #    with settings(warn_only=True):
